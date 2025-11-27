@@ -17,3 +17,12 @@ Note: when updating this path if you are using qgis-ltr then the path will need 
 ```SetEnv QGIS_PROJECT_FILE "C:/Users/*Your USERNAME*/lg_meetup/nsw_lga.qgz"``` 
 
 With those steps completed youe would be able to load http://localhost and get a page that reads "It Works" or load the following page "http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities" and get the XML get capabilities document for your map file.
+
+### Deploy the pages in this repo
+To see the example pages that I showed in the demo at Mudgee. Grab the two html pages from this repo and place them into the following folder "C:\OSGeo4W\apps\apache\htdocs"
+
+<img width="642" height="246" alt="image" src="https://github.com/user-attachments/assets/da51a774-f022-499e-a916-bf06dae845b1" />
+
+The htdocs folder is the publishing folder for Apache. The index.html file is the default page that contains the "It Works" message. Now with these two new HTML files in this folder we should be able to load the following URLS and get a page.
+- http://localhost/search.html
+- http://localhost/map.html
