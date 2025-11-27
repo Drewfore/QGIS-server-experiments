@@ -10,6 +10,7 @@ You will need a QGIS Server running locally. Fortunately, this is now well docum
 Follow the steps documented here - https://docs.qgis.org/3.40/en/docs/server_manual/getting_started.html#installation-on-windows
 
 When you get to "Step 4." you should only need to change two items in the ```C:\OSGeo4w\apps\apache\conf\httpd.conf``` file. These are:
-- 1 ```ScriptAlias /cgi-bin/ "${SRVROOT}/cgi-bin/"``` to ```ScriptAlias /cgi-bin/ "C:/OSGeo4W/apps/qgis/bin/"```
-- 2 At the bottom of the file add a reference to your project file ```# default QGIS project
+1. ```ScriptAlias /cgi-bin/ "${SRVROOT}/cgi-bin/"``` to ```ScriptAlias /cgi-bin/ "C:/OSGeo4W/apps/qgis/bin/"``` - when updating this path if you are using qgis-ltr then the pat will need to be ```C:/OSGeo4W/apps/qgis-ltr/bin/```
+2. At the bottom of the file add a reference to your project file
+```# default QGIS project
 SetEnv QGIS_PROJECT_FILE "C:/Users/*Your USERNAME*/qgis_projects/qgis-server-tutorial-data/world.qgs"``` 
