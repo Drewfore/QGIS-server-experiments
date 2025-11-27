@@ -9,9 +9,11 @@ You will need a QGIS Server running locally. Fortunately, this is now well docum
 ### QGIS Server install
 Follow the steps documented here - https://docs.qgis.org/3.40/en/docs/server_manual/getting_started.html#installation-on-windows
 
-When you get to "Step 4." you should only need to change two items in the ```C:\OSGeo4w\apps\apache\conf\httpd.conf``` file. These are:
-1. ```ScriptAlias /cgi-bin/ "${SRVROOT}/cgi-bin/"``` to ```ScriptAlias /cgi-bin/ "C:/OSGeo4W/apps/qgis/bin/"```
-Note: when updating this path if you are using qgis-ltr then the pat will need to be ```C:/OSGeo4W/apps/qgis-ltr/bin/```
+When you get to "Step 4." which involves making changes to the httpd.conf file. I found that I didn't have to do all of these but there were two that were required to get me moving.
+
+1. Change ```ScriptAlias /cgi-bin/ "${SRVROOT}/cgi-bin/"``` to ```ScriptAlias /cgi-bin/ "C:/OSGeo4W/apps/qgis/bin/"```
+Note: when updating this path if you are using qgis-ltr then the path will need to be ```C:/OSGeo4W/apps/qgis-ltr/bin/```
 2. At the bottom of the file add a reference to your project file
-```# default QGIS project
-SetEnv QGIS_PROJECT_FILE "C:/Users/*Your USERNAME*/qgis_projects/qgis-server-tutorial-data/world.qgs"``` 
+```SetEnv QGIS_PROJECT_FILE "C:/Users/*Your USERNAME*/lg_meetup/nsw_lga.qgz"``` 
+
+With those steps completed youe would be able to load http://localhost and get a page that reads "It Works" or load the following page "http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities" and get the XML get capabilities document for your map file.
