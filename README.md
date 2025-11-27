@@ -19,6 +19,7 @@ Note: when updating this path if you are using qgis-ltr then the path will need 
 With those steps completed youe would be able to load http://localhost and get a page that reads "It Works" or load the following page "http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities" and get the XML get capabilities document for your map file.
 
 ### Deploy the QGIS project
+Take the "LG_Meetup" folder and place it into your ```C:/Users/*Your USERNAME*``` folder. This location should match the ```QGIS_PROJECT_FILE``` environment variable that you set in the step above.
 
 ### Deploy the pages
 To see the example pages that I showed in the demo at Mudgee. Grab the two html pages from this repo and place them into the following folder "C:\OSGeo4W\apps\apache\htdocs"
